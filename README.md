@@ -1,23 +1,37 @@
-#  Tutorial Expo
+# Tutorial Expo
 
-Questo repository contiene la mia prima applicazione sviluppata con **Expo Framework** e **React Native**. Il progetto nasce come esercitazione pratica per comprendere come funziona la gestione delle pagine e la navigazione all'interno di un'app per smartphone.
+Questo repository contiene la mia prima applicazione sviluppata con **Expo Framework** e **React Native**. Il progetto nasce come esercitazione pratica per comprendere come funziona la gestione delle pagine, la navigazione all'interno di un'app per smartphone e l'integrazione di componenti hardware nativi.
 
 ---
 
-##  Funzionalità Implementate
+## Funzionalità Implementate
 
-- [x] **Ambiente Expo:** Configurazione dell'ambiente di sviluppo locale nativo ed esecuzione dell'app tramite browser (per aggirare i firewall di rete).
-- [x] **Navigazione a Schede (Tab Navigation):** Creazione di una barra di menu inferiore (`(tabs)`) che permette di spostarsi fluidamente tra la schermata **Home** e la schermata **About (Informazioni)**.
+- [x] **Ambiente Expo:** Configurazione dell'ambiente di sviluppo locale nativo ed esecuzione dell'app tramite connessione locale (cavo USB/IP locale) o Tunnel per l'ispezione sul dispositivo.
+- [x] **Navigazione a Schede (Tab Navigation):** Creazione di una barra di menu inferiore (`(tabs)`) che permette di spostarsi fluidamente entre la schermata **Home** e la schermata **About (Informazioni)**.
+- [x] **Integrazione Fotocamera Nativa:** Utilizzo del modulo hardware tramite la libreria ufficiale di Expo per mostrare l'inquadratura in tempo reale e scattare fotografie direttamente dall'applicazione.
+- [x] **Sfondo Animato Dinamico (RGB Fade):** Implementazione di un'animazione ciclica fluida (in loop infinito) che cambia continuamente il colore di sfondo della sezione inferiore dello schermo tramite la libreria nativa `Animated`.
 - [x] **Gestione dei Percorsi Errati (404 Fallback):** Creazione della schermata speciale `+not-found.tsx`. Se si inserisce un indirizzo sbagliato o inesistente, l'app mostra una schermata di errore personalizzata ("Oops! Not Found") con un link sicuro per ritornare alla Home.
 
 ---
 
-##  Concetti Chiave Appresi
+## Concetti Chiave Appresi
 
-* **File-based Routing:** Con Expo Router, la struttura delle cartelle crea automaticamente i percorsi dell'app (es. il file `about.tsx` diventa la pagina delle informazioni).
-* **Layout Annidati (Nested Layouts):** Organizzazione dello Stack principale per gestire contemporaneamente sia i menu in basso (`tabs`), sia le schermate di errore totali.
-* **Risoluzione Problemi di Cache:** Uso del comando `npx expo start -c` per svuotare la cache del server e forzare Expo a leggere i nuovi spostamenti delle cartelle.
+* **File-based Routing con Gruppi:** Con Expo Router, l'organizzazione dei file determina i percorsi. L'uso delle cartelle tra parentesi come `(tabs)` permette di raggruppare le schermate sotto lo stesso layout senza influenzare l'URL o il percorso logico.
+* **Gestione dei Permessi Hardware:** Gestione del ciclo di vita dei permessi di Android e iOS tramite hook dedicati (`useCameraPermissions`), bloccando l'interfaccia o mostrando messaggi di richiesta dinamici fino al consenso dell'utente.
+* **Riferimenti ai Componenti Nativi (Refs):** Utilizzo dell'hook `useRef` per agganciarsi direttamente all'istanza hardware di un componente (come `CameraView`) per poterne invocare i metodi asincroni nativi (es. `takePictureAsync`).
+* **Interpolazione delle Animazioni:** Uso di `Animated.Value` e della funzione `.interpolate()` per mappare una timeline numerica continua su una serie definita di stringhe di colore RGB, creando transizioni cromatiche fluide.
 
+---
+
+## 📂 Struttura Attuale del Progetto
+
+```text
+└── app/                  # Cartella principale della nostra applicazione
+    ├── (tabs)/           # Gruppo della navigazione a schede in basso (Comanda i percorsi)
+    │   ├── _layout.tsx   # Gestore della barra dei menu (Home / About)
+    │   ├── index.tsx     # Schermata principale aggiornata (Fotocamera + Sfondo Animato)
+    │   └── about.tsx     # Schermata delle informazioni (About screen)
+    └── +not-found.tsx    # La pagina di salvataggio se l'indirizzo è sbagliato
 ---
 
 ## 📂 Struttura Attuale del Progetto

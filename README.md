@@ -1,4 +1,4 @@
-# Progetto Expo - Product Information App
+# Progetto Expo - Tutorial
 
 Questo progetto è un'applicazione per telefono creata con Expo e React Native. Serve come esercitazione pratica per imparare a gestire le pagine, i passaggi da una schermata all'altra e l'uso di funzioni del telefono come la fotocamera.
 

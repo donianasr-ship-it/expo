@@ -3,121 +3,9 @@ import { Link } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { Animated, Button, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-// DATABASE CONFIGURATO CON I VOSTRI CODICI REALI EAN-13
-const prodottiDatabase: Record<string, { 
-  nome: string; 
-  categoria: string;
-  lotto: string; 
-  certificazioni: string[]; 
-  storia: string;
-  prezzoMedio?: string;
-  valutazione?: string;
-  recensioni?: string[];
-}> = {
-  // --- BOTTIGLIE DI VINO ---
-  "8012345678905": {
-    nome: "Vino Rosso Riserva 750 ml",
-    categoria: "Digital Product Passport",
-    lotto: "LR26-05",
-    certificazioni: ["DOCG Riserva", "Solfiti Limitati Certificati"],
-    storia: "Ottenuto da uve selezionate raccolte a mano nelle storiche vigne collinari. Affinato in botti di rovere per 24 mesi per garantire una struttura complessa e un bouquet vellutato.",
-    prezzoMedio: "18.50 €",
-    valutazione: "4.9 / 5 ⭐",
-    recensioni: ["Un rosso eccezionale, perfetto con le carni rosse.", "Corposo, persistente ed equilibrato."]
-  },
-  "8012345678912": {
-    nome: "Vino Bianco DOC 750 ml",
-    categoria: "Digital Product Passport",
-    lotto: "LB26-12",
-    certificazioni: ["DOC Controllata", "Biologico"],
-    storia: "Prodotto con tecniche di vinificazione a temperatura controllata per preservare la freschezza e le spiccate note floreali e fruttate tipiche del vitigno originario.",
-    prezzoMedio: "12.40 €",
-    valutazione: "4.6 / 5 ⭐",
-    recensioni: ["Ottimo come aperitivo, freschissimo.", "Leggero e profumato."]
-  },
-  "8012345678929": {
-    nome: "Vino Rosato 750 ml",
-    categoria: "Smart Label App",
-    lotto: "LRO26-29",
-    certificazioni: ["IGT Tipica", "Sostenibilità Ambientale"],
-    storia: "Un rosato fresco dal carattere vibrante, ottenuto da una pressatura soffice delle uve rosse con un brevissimo contatto con le bucce per estrarre la tipica colorazione cerasuola.",
-    prezzoMedio: "10.00 €",
-    valutazione: "4.4 / 5 ⭐",
-    recensioni: ["Ideale per le sere d'estate, molto beverino."]
-  },
-  "8012345678936": {
-    nome: "Cannonau di Sardegna 750 ml",
-    categoria: "Traceability App",
-    lotto: "LCN26-36",
-    certificazioni: ["DOC Sardegna", "Filiera Tracciata 100%"],
-    storia: "Simbolo della viticoltura sarda, questo Cannonau esprime la forza del territorio. Le vigne crescono accarezzate dal vento salmastro del Mediterraneo su terreni granitici.",
-    prezzoMedio: "15.90 €",
-    valutazione: "4.8 / 5 ⭐",
-    recensioni: ["Un Cannonau autentico e fiero, eccellente strutturato.", "Sapore intenso, si sente la Sardegna."]
-  },
-  "8012345678943": {
-    nome: "Vermentino di Sardegna 750 ml",
-    categoria: "Traceability App",
-    lotto: "LVM26-43",
-    certificazioni: ["DOC Vermentino", "Basso Contenuto di Solfiti"],
-    storia: "Vino bianco sapido e minerale, caratterizzato da un finale piacevolmente mandorlato. Prodotto lungo le coste esposte al sole, racchiude l'essenza dell'isola.",
-    prezzoMedio: "14.20 €",
-    valutazione: "4.7 / 5 ⭐",
-    recensioni: ["Perfetto con piatti di pesce e crostacei.", "Mineralità eccezionale."]
-  },
-
-  // --- BOTTIGLIE DI OLIO ---
-  "8023456789000": {
-    nome: "Olio EVO 500 ml",
-    categoria: "Digital Product Passport",
-    lotto: "EVO50-00",
-    certificazioni: ["Estratto a Freddo", "100% Italiano"],
-    storia: "Olio Extravergine di oliva di categoria superiore. Le olive vengono molite entro poche ore dalla raccolta per preservare le proprietà antiossidanti ed organolettiche.",
-    prezzoMedio: "9.50 €",
-    valutazione: "4.5 / 5 ⭐",
-    recensioni: ["Ottimo rapporto qualità prezzo.", "Un sapore equilibrato, adatto a tutti i giorni."]
-  },
-  "8023456789017": {
-    nome: "Olio EVO 750 ml",
-    categoria: "Digital Product Passport",
-    lotto: "EVO75-17",
-    certificazioni: ["Estratto a Freddo", "Campagna Olearia 2026"],
-    storia: "La versione da 750 ml della nostra selezione di Extravergine. Ideale per l'uso culinario domestico quotidiano sia a crudo che in cottura.",
-    prezzoMedio: "13.00 €",
-    valutazione: "4.6 / 5 ⭐",
-    recensioni: ["Formato comodo, l'olio mantiene benissimo la sua fragranza."]
-  },
-  "8023456789024": {
-    nome: "Olio EVO 1 L",
-    categoria: "Digital Product Passport",
-    lotto: "EVO1L-24",
-    certificazioni: ["Qualità Superiore", "Filiera Controllata"],
-    storia: "Formato scorta da un litro della nostra selezione classica. Conservato in bottiglia di vetro scuro per proteggere il prodotto dall'ossidazione della luce.",
-    prezzoMedio: "16.50 €",
-    valutazione: "4.5 / 5 ⭐",
-    recensioni: ["Perfetto per la famiglia, sapore fruttato leggero."]
-  },
-  "8023456789031": {
-    nome: "Olio Biologico 500 ml",
-    categoria: "Smart Label App",
-    lotto: "BIO50-31",
-    certificazioni: ["Agricoltura Biologica Certificata", "Zero Pesticidi"],
-    storia: "Prodotto esclusivamente da uliveti coltivati seguendo i rigidi standard dell'agricoltura biologica, senza l'uso di sostanze chimiche di sintesi o pesticidi.",
-    prezzoMedio: "12.00 €",
-    valutazione: "4.8 / 5 ⭐",
-    recensioni: ["Si sente la purezza del biologico. Eccellente sul pane."]
-  },
-  "8023456789048": {
-    nome: "Olio DOP Sardegna 750 ml",
-    categoria: "Digital Product Passport",
-    lotto: "DOP75-48",
-    certificazioni: ["DOP Sardegna", "Presidio Slow Food"],
-    storia: "Prodotto d'eccellenza con certificazione d'Origine Protetta. Caratterizzato da un sapore fruttato verde medio-intenso con sentori di carciofo e pomodoro verde.",
-    prezzoMedio: "21.00 €",
-    valutazione: "5.0 / 5 ⭐",
-    recensioni: ["Un olio regale. Il retrogusto di carciofo è fantastico.", "Superbo a crudo."]
-  }
-};
+// Importiamo i due file JSON presenti nella stessa cartella app
+import databaseEan13 from '../database_ean13.json';
+import databaseQrcode from '../database_qrcode.json';
 
 export default function Index() {
   const [permission, requestPermission] = useCameraPermissions();
@@ -149,22 +37,63 @@ export default function Index() {
     ],
   });
 
+// Gestione dell'evento di scansione del sensore fotografico potenziata
   const handleBarCodeScanned = ({ type, data }: { type: string; data: string }) => {
+    if (!data) return;
+    
+    // Blocca letture multiple consecutive
     setScanned(true);
 
-    const prodotto = prodottiDatabase[data];
+    // Puliamo il testo scansionato da eventuali spazi bianchi o invii invisibili
+    const cleanedData = data.trim();
+    console.log("Codice scansionato pulito:", cleanedData);
+
+    // 1. Cerca nel database EAN-13 (Ricerca flessibile per chiave o valore)
+    let prodotto = databaseEan13[cleanedData as keyof typeof databaseEan13];
+    if (!prodotto) {
+      // Se non lo trova come chiave diretta, cerca se il codice è dentro l'oggetto
+      prodotto = Object.values(databaseEan13).find((p: any) => p.codice === cleanedData || p.ean === cleanedData);
+    }
+
+    // 2. Cerca nel database QR Code (Produttori)
+    let produttore = databaseQrcode[cleanedData as keyof typeof databaseQrcode];
+    if (!produttore) {
+      // Cerca se il testo corrisponde al nome del produttore o all'id interno
+      produttore = Object.values(databaseQrcode).find((p: any) => 
+        p.id === cleanedData || 
+        p.produttore?.toLowerCase() === cleanedData.toLowerCase()
+      );
+    }
 
     if (prodotto) {
+      console.log("Trovato Prodotto:", prodotto.nome);
       setProdottoTrovato(prodotto);
+    } else if (produttore) {
+      console.log("Trovato Produttore:", produttore.produttore);
+      setProdottoTrovato({
+        nome: produttore.produttore,
+        categoria: "Profilo Azienda / Produttore",
+        lotto: "Anno Fondazione: " + produttore.fondazione,
+        certificazioni: [produttore.regione, "Sito Web"],
+        storia: produttore.filosofia,
+        prezzoMedio: produttore.sitoWeb,
+        valutazione: "GPS: " + produttore.coordinateGps,
+        recensioni: [
+          { utente: "Email", commento: produttore.contatti.email, stelle: 5 },
+          { utente: "Telefono", commento: produttore.contatti.telefono, stelle: 5 }
+        ]
+      });
     } else {
+      console.log("Codice non presente a database.");
+      // Mostra comunque il codice letto così capiamo cosa ha visto la fotocamera
       setProdottoTrovato({
         nome: "Codice Sconosciuto",
         categoria: "Smart Label / Traceability App",
-        lotto: "N/D",
-        certificazioni: ["Nessuna Certificazione Trovata"],
-        storia: `Il codice letto (${data}) non corrisponde a nessun vino o olio censito all'interno dell'elenco del progetto.`,
-        prezzoMedio: "N/D",
-        valutazione: "N/D",
+        lotto: `Letto: "${cleanedData}"`,
+        certificazioni: ["Nessun record trovato"],
+        storia: `Il codice letto dalla fotocamera (${cleanedData}) non corrisponde a nessuna chiave presente nel tuo file JSON.`,
+        prezzoMedio: 0,
+        valutazione: 0,
         recensioni: []
       });
     }
@@ -189,19 +118,23 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      {/* CAMERA VIEW */}
-      <CameraView 
-        style={styles.camera} 
-        ref={cameraRef}
-        onBarcodeScanned={scanned ? undefined : handleBarCodeScanned}
-        barcodeScannerSettings={{
-          barcodeTypes: ["ean13", "ean8", "qr"],
-        }}
-      >
-        <View style={styles.overlayContainer}>
+      
+      {/* SEZIONE FOTOCAMERA: Struttura standard Expo per evitare conflitti di layout */}
+      <View style={styles.cameraContainer}>
+        <CameraView 
+          style={styles.cameraLayout}
+          ref={cameraRef}
+          onBarcodeScanned={scanned ? undefined : handleBarCodeScanned}
+          barcodeScannerSettings={{
+            barcodeTypes: ["ean13", "qr", "ean8"],
+          }}
+        />
+        
+        {/* Il mirino grafico è dentro il contenitore ma non interferisce con il sensore */}
+        <View style={styles.overlayContainer} pointerEvents="none">
           <View style={[styles.scannerTarget, scanned && styles.scannerTargetScanned]} />
         </View>
-      </CameraView>
+      </View>
 
       {/* PANNELLO INFORMATIVO INFERIORE */}
       <Animated.View style={[styles.navContainer, { backgroundColor: backgroundColorInterpolate }]}>
@@ -209,21 +142,20 @@ export default function Index() {
         {!prodottoTrovato ? (
           <View style={styles.centerInstructions}>
             <Text style={styles.instructionText}>Scanner di Tracciabilità Attivo</Text>
-            <Text style={styles.subInstructionText}>Inquadra un codice EAN-13 per sbloccare il Passaporto Digitale del Prodotto</Text>
+            <Text style={styles.subInstructionText}>Inquadra un codice EAN-13 o un QR Code aziendale per sbloccare le informazioni</Text>
           </View>
         ) : (
           <ScrollView style={styles.scrollContainer} contentContainerStyle={{ paddingBottom: 25 }}>
             <Text style={styles.tagCategoria}>{prodottoTrovato.categoria.toUpperCase()}</Text>
             <Text style={styles.productTitle}>{prodottoTrovato.nome}</Text>
             
-            {/* Dati del Prodotto */}
             <View style={styles.infoBlock}>
-              <Text style={styles.sectionLabel}>Lotto di Produzione:</Text>
+              <Text style={styles.sectionLabel}>Identificativo / Riferimento:</Text>
               <Text style={styles.infoText}>{prodottoTrovato.lotto}</Text>
             </View>
 
             <View style={styles.infoBlock}>
-              <Text style={styles.sectionLabel}>Certificazioni di Qualità:</Text>
+              <Text style={styles.sectionLabel}>Certificazioni e Informazioni:</Text>
               <View style={styles.certRow}>
                 {prodottoTrovato.certificazioni.map((cert: string, index: number) => (
                   <View key={index} style={styles.certBadge}>
@@ -234,31 +166,29 @@ export default function Index() {
             </View>
 
             <View style={styles.infoBlock}>
-              <Text style={styles.sectionLabel}>Storia del Produttore:</Text>
+              <Text style={styles.sectionLabel}>Dettagli e Storia:</Text>
               <Text style={styles.historyText}>{prodottoTrovato.storia}</Text>
             </View>
 
-            {/* Box per gli Sviluppi Futuri */}
             <View style={styles.futureBlock}>
-              <Text style={styles.futureTitle}>🚀 Integrazioni Future</Text>
+              <Text style={styles.futureTitle}>🚀 Integrazioni e Indicatori</Text>
               
-              <Text style={styles.futureLabel}>Prezzo Medio Corrente:</Text>
+              <Text style={styles.futureLabel}>Riferimento Commerciale / Prezzo:</Text>
               <Text style={styles.futureValue}>{prodottoTrovato.prezzoMedio}</Text>
 
-              <Text style={styles.futureLabel}>Valutazione della Community:</Text>
+              <Text style={styles.futureLabel}>Affidabilità / Valutazione:</Text>
               <Text style={styles.futureValue}>{prodottoTrovato.valutazione}</Text>
 
-              <Text style={styles.futureLabel}>Ultime Recensioni:</Text>
+              <Text style={styles.futureLabel}>Note Aggiuntive / Recensioni:</Text>
               {prodottoTrovato.recensioni && prodottoTrovato.recensioni.length > 0 ? (
                 prodottoTrovato.recensioni.map((rec: string, i: number) => (
-                  <Text key={i} style={styles.reviewText}>• "{rec}"</Text>
+                  <Text key={i} style={styles.reviewText}>• {typeof rec === 'object' ? JSON.stringify(rec) : rec}</Text>
                 ))
               ) : (
-                <Text style={styles.reviewText}>Nessuna recensione registrata per questo lotto.</Text>
+                <Text style={styles.reviewText}>Nessuna nota extra registrata.</Text>
               )}
             </View>
 
-            {/* Reset Scanner */}
             <TouchableOpacity 
               style={styles.resetButton} 
               onPress={() => {
@@ -266,7 +196,7 @@ export default function Index() {
                 setProdottoTrovato(null);
               }}
             >
-              <Text style={styles.resetButtonText}>SCANSIONA UN ALTRO PRODOTTO</Text>
+              <Text style={styles.resetButtonText}>EFFETTUA UNA NUOVA SCANSIONE</Text>
             </TouchableOpacity>
           </ScrollView>
         )}
@@ -284,18 +214,30 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#141619',
   },
-  camera: {
-    flex: 4,
+  cameraContainer: {
+    flex: 4, 
+    position: 'relative',
+  },
+  cameraLayout: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
   overlayContainer: {
-    flex: 1,
-    backgroundColor: 'transparent',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'transparent',
   },
   scannerTarget: {
-    width: 210,
-    height: 150, // Più largo che alto, ottimizzato per catturare i codici a barre lineari (EAN)
+    width: 240,
+    height: 160, 
     borderWidth: 3,
     borderColor: '#00ffcc',
     backgroundColor: 'transparent',

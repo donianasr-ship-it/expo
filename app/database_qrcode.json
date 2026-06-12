@@ -1,0 +1,122 @@
+{
+    "QR_PROD_001": {
+        "produttore": "Società Agricola Tenuta Realis S.r.l.",
+        "regione": "Toscana (Siena)",
+        "fondazione": "1948",
+        "sitoWeb": "https://www.tenutarealis-mockup.it",
+        "coordinateGps": "43.4632, 11.2841",
+        "filosofia": "Coltiviamo rispettando la biodiversità del suolo, unendo le storiche tradizioni toscane con moderni impianti di vinificazione a basso impatto ambientale.",
+        "contatti": {
+            "email": "info@tenutarealis.it",
+            "telefono": "+39 0577 123456"
+        }
+    },
+    "QR_PROD_002": {
+        "produttore": "Cantine Il Filare di Langa",
+        "regione": "Piemonte (Cuneo)",
+        "fondazione": "1923",
+        "sitoWeb": "https://www.ilfilarelanghe-mockup.it",
+        "coordinateGps": "44.6112, 7.9945",
+        "filosofia": "Tre generazioni di viticoltori dediti alla valorizzazione del Nebbiolo. Ogni bottiglia racchiude l'anima profonda delle nostre colline patrimonio UNESCO.",
+        "contatti": {
+            "email": "cantina@ilfilarelanghe.it",
+            "telefono": "+39 0173 987654"
+        }
+    },
+    "QR_PROD_003": {
+        "produttore": "Vigneti Feudo d'Oro",
+        "regione": "Sicilia (Agrigento)",
+        "fondazione": "1995",
+        "sitoWeb": "https://www.feudodoro-mockup.it",
+        "coordinateGps": "37.3111, 13.5764",
+        "filosofia": "Viticoltura eroica sotto il sole della Sicilia. Produciamo vini solari, salini e fortemente territoriali, certificati biologici e vegani.",
+        "contatti": {
+            "email": "commerciale@feudodoro.it",
+            "telefono": "+39 0922 456123"
+        }
+    },
+    "QR_PROD_004": {
+        "produttore": "Azienda Agricola Poggio dei Ciliegi",
+        "regione": "Veneto (Verona)",
+        "fondazione": "1960",
+        "sitoWeb": "https://www.poggiodeiciliegi-mockup.it",
+        "coordinateGps": "45.5439, 10.9922",
+        "filosofia": "L'eccellenza della Valpolicella. La nostra dedizione all'appassimento tradizionale garantisce vini complessi e indimenticabili.",
+        "contatti": {
+            "email": "hello@poggiodeiciliegi.it",
+            "telefono": "+39 045 789123"
+        }
+    },
+    "QR_PROD_005": {
+        "produttore": "Tenuta Perla di Langa",
+        "regione": "Piemonte (Asti)",
+        "fondazione": "1988",
+        "sitoWeb": "https://www.perladilanga-mockup.it",
+        "coordinateGps": "44.6983, 8.2251",
+        "filosofia": "Specialisti del Metodo Classico. Cerchiamo la massima precisione espressiva, freschezza e verticalità in ogni spumante.",
+        "contatti": {
+            "email": "bollicine@perladilanga.it",
+            "telefono": "+39 0141 334455"
+        }
+    },
+    "QR_PROD_006": {
+        "produttore": "Frantoio Oleario Olis Regalis",
+        "regione": "Puglia (Bari)",
+        "fondazione": "1972",
+        "sitoWeb": "https://www.olisregalis-mockup.it",
+        "coordinateGps": "41.1115, 16.6922",
+        "filosofia": "Custodi degli ulivi secolari di Coratina. Molitura immediata a freddo per preservare i preziosi antiossidanti dell'oro verde di Puglia.",
+        "contatti": {
+            "email": "frantoio@olisregalis.it",
+            "telefono": "+39 080 555666"
+        }
+    },
+    "QR_PROD_007": {
+        "produttore": "Frantoio Valle degli Ulivi",
+        "regione": "Toscana (Firenze)",
+        "fondazione": "1955",
+        "sitoWeb": "https://www.valledegliulivi-mockup.it",
+        "coordinateGps": "43.7228, 11.2911",
+        "filosofia": "Passione e innovazione tecnologica nel rispetto del disciplinare IGP Toscano. Un olio profumato, specchio fedele delle nostre colline.",
+        "contatti": {
+            "email": "info@valledegliulivi.it",
+            "telefono": "+39 055 888999"
+        }
+    },
+    "QR_PROD_008": {
+        "produttore": "Oleificio Sapore del Sud",
+        "regione": "Sicilia (Trapani)",
+        "fondazione": "1982",
+        "sitoWeb": "https://www.saporedelsud-mockup.it",
+        "coordinateGps": "37.5844, 12.8312",
+        "filosofia": "Produzione artigianale da oliveti nella Valle del Belice. Catturiamo tutta l'intensità e i profumi della macchia mediterranea.",
+        "contatti": {
+            "email": "ordini@saporedelsud.it",
+            "telefono": "+39 0924 777888"
+        }
+    },
+    "QR_PROD_009": {
+        "produttore": "Antichi Frantoi Liguri",
+        "regione": "Liguria (Imperia)",
+        "fondazione": "1910",
+        "sitoWeb": "https://www.antichifrantoiliguri-mockup.it",
+        "coordinateGps": "43.8861, 8.0264",
+        "filosofia": "La traditione dell'oliva Taggiasca coltivata sui tipici muretti a secco liguri. Un olio leggero ed elegante, frutto di una terra eroica.",
+        "contatti": {
+            "email": "muretti@antichifrantoi.it",
+            "telefono": "+39 0183 112233"
+        }
+    },
+    "QR_PROD_010": {
+        "produttore": "Azienda Agricola Colle Umbro",
+        "regione": "Umbria (Perugia)",
+        "fondazione": "2001",
+        "sitoWeb": "https://www.colleumbro-mockup.it",
+        "coordinateGps": "42.9815, 12.4144",
+        "filosofia": "Sostenibilità energetica e filiera cortissima. Le nostre olive vengono frante a km zero per garantire un... prodotto freschissimo e genuino.",
+        "contatti": {
+            "email": "frantoio@colleumbro.it",
+            "telefono": "+39 075 443322"
+        }
+    }
+}

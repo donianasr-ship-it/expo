@@ -1,0 +1,236 @@
+{
+    "4101234567898": {
+        "nome": "Tenuta Realis - Chianti Classico DOCG 2021",
+        "categoria": "Vino Rosso",
+        "lotto": "L.CH21/04",
+        "certificazioni": [
+            "DOCG",
+            "Biologico"
+        ],
+        "storia": "Prodotto nel cuore della Toscana da vitigni Sangiovese coltivati a 350m di altitudine, con affinamento di 12 mesi in botti di rovere francese.",
+        "prezzoMedio": 18.5,
+        "valutazione": 4.7,
+        "recensioni": [
+            {
+                "utente": "Marco Rossi",
+                "stelle": 5,
+                "commento": "Un Chianti eccellente, corpo strutturato e note di frutti rosso mature."
+            },
+            {
+                "utente": "Elena B.",
+                "stelle": 4,
+                "commento": "Molto buono, perfetto con la carne rossa. Tannini equilibrati."
+            }
+        ]
+    },
+    "8005551112228": {
+        "nome": "Il Filare - Barolo DOCG 2019",
+        "categoria": "Vino Rosso",
+        "lotto": "L.BR19/12",
+        "certificazioni": [
+            "DOCG"
+        ],
+        "storia": "Ottenuto da uve Nebbiolo in purezza nelle colline delle Langhe. Affinato per 36 mesi, di cui 18 in legno, per una complessità inconfondibile.",
+        "prezzoMedio": 42.0,
+        "valutazione": 4.9,
+        "recensioni": [
+            {
+                "utente": "Giovanni T.",
+                "stelle": 5,
+                "commento": "Un capolavoro. Note di tabacco e spezie. Longevità eccezionale."
+            },
+            {
+                "utente": "Sofia Vigneti",
+                "stelle": 5,
+                "commento": "Barolo maestoso, elegante e persistente."
+            }
+        ]
+    },
+    "8412345678905": {
+        "nome": "Feudo d'Oro - Grillo Sicilia DOC 2023",
+        "categoria": "Vino Bianco",
+        "lotto": "L.GR23/01",
+        "certificazioni": [
+            "DOC",
+            "Vegan Certified"
+        ],
+        "storia": "Un bianco fresco e sapido nato dai venti caldi della costa siciliana. Note intense di agrumi e zagara bianca.",
+        "prezzoMedio": 9.8,
+        "valutazione": 4.2,
+        "recensioni": [
+            {
+                "utente": "Luca M.",
+                "stelle": 4,
+                "commento": "Fresco e profumato, ideale per aperitivi a base di pesce."
+            },
+            {
+                "utente": "Anna De Luca",
+                "stelle": 4,
+                "commento": "Buon rapporto qualità prezzo. Molto minerale."
+            }
+        ]
+    },
+    "8009998887770": {
+        "nome": "Poggio dei Ciliegi - Amarone della Valpolicella 2018",
+        "categoria": "Vino Rosso",
+        "lotto": "L.AM18/09",
+        "certificazioni": [
+            "DOCG"
+        ],
+        "storia": "Ottenuto con la tradizionale tecnica dell'appassimento delle uve sui graticci per oltre 100 giorni. Struttura imponente e morbidezza.",
+        "prezzoMedio": 55.0,
+        "valutazione": 4.8,
+        "recensioni": [
+            {
+                "utente": "Roberto F.",
+                "stelle": 5,
+                "commento": "Caldo, avvolgente, sentori di amarena sotto spirito e cioccolato."
+            },
+            {
+                "utente": "Clara B.",
+                "stelle": 4,
+                "commento": "Un vino da meditazione strepitoso, molto alcolico ma bilanciato."
+            }
+        ]
+    },
+    "4901234567894": {
+        "nome": "Perla di Langa - Alta Langa DOCG Pas Dosé 2020",
+        "categoria": "Spumante",
+        "lotto": "L.AL20/FE",
+        "certificazioni": [
+            "DOCG"
+        ],
+        "storia": "Metodo Classico piemontese da uve Pinot Nero e Chardonnay. Affinamento sui lieviti per 36 mesi per un perlage finissimo.",
+        "prezzoMedio": 29.0,
+        "valutazione": 4.6,
+        "recensioni": [
+            {
+                "utente": "Matteo S.",
+                "stelle": 5,
+                "commento": "Perlage finissimo e persistente. Crosta di pane e mela verde."
+            },
+            {
+                "utente": "Lucia Castelli",
+                "stelle": 4,
+                "commento": "Secco, dritto, acidità perfetta. Ottimo brindisi."
+            }
+        ]
+    },
+    "8410567890129": {
+        "nome": "Olis Regalis - Olio Extra Vergine di Oliva monocultivar Coratina",
+        "categoria": "Olio EVO",
+        "lotto": "L.OL24/C01",
+        "certificazioni": [
+            "DOP Terra di Bari",
+            "Biologico"
+        ],
+        "storia": "Estratto a freddo esclusivamente da olive Coratina coltivate a Bitonto. Caratterizzato da un fruttato intenso con decise note di piccante e amaro.",
+        "prezzoMedio": 16.5,
+        "valutazione": 4.8,
+        "recensioni": [
+            {
+                "utente": "Antonio P.",
+                "stelle": 5,
+                "commento": "La vera Coratina! Pizzica meravigliosamente in gola. Perfetto a crudo."
+            },
+            {
+                "utente": "Maria G.",
+                "stelle": 4,
+                "commento": "Profumo di erba tagliata fantastico, ottimo sulle zuppe di legumi."
+            }
+        ]
+    },
+    "4006381333931": {
+        "nome": "Valle degli Ulivi - Olio EVO Biologico Toscano IGP",
+        "categoria": "Olio EVO",
+        "lotto": "L.OL24/T05",
+        "certificazioni": [
+            "IGP Toscano",
+            "Biologico"
+        ],
+        "storia": "Frutto delle storiche varietà Frantoio, Leccino e Moraiolo. Raccolta precoce e frangitura entro 6 ore per preservare i polifenoli.",
+        "prezzoMedio": 19.0,
+        "valutazione": 4.7,
+        "recensioni": [
+            {
+                "utente": "Filippo L.",
+                "stelle": 5,
+                "commento": "Equilibrato, note di carciofo e mandorla verde. Un classico intramontabile."
+            },
+            {
+                "utente": "Simona R.",
+                "stelle": 4,
+                "commento": "Eccellente sulla bruschetta e sulle verdure grigliate."
+            }
+        ]
+    },
+    "8008889991114": {
+        "nome": "Sapore del Sud - Olio EVO Nocellara del Belice",
+        "categoria": "Olio EVO",
+        "lotto": "L.OL24/N02",
+        "certificazioni": [
+            "DOP Val di Mazara"
+        ],
+        "storia": "Olio monovarietale da olive Nocellara del Belice. Sentori di pomodoro verde, foglia di pomodoro ed erbe aromatiche.",
+        "prezzoMedio": 15.0,
+        "valutazione": 4.5,
+        "recensioni": [
+            {
+                "utente": "Giuseppe M.",
+                "stelle": 4,
+                "commento": "Gusto rotondo e quel tipico sentore di pomodoro che adoro sul pesce."
+            },
+            {
+                "utente": "Valeria N.",
+                "stelle": 5,
+                "commento": "Morbido ma saporito, acidità quasi impercettibile."
+            }
+        ]
+    },
+    "3012345678902": {
+        "nome": "Antichi Frantoi - Olio EVO Ligure DOP Riviera Ligure",
+        "categoria": "Olio EVO",
+        "lotto": "L.OL24/R11",
+        "certificazioni": [
+            "DOP Riviera Ligure"
+        ],
+        "storia": "Prodotto prevalentemente da olive di varietà Taggiasca. Un olio delicato, dolce, con leggere note di mandorla, perfetto per non coprire i piatti.",
+        "prezzoMedio": 22.0,
+        "valutazione": 4.6,
+        "recensioni": [
+            {
+                "utente": "Fabio C.",
+                "stelle": 5,
+                "commento": "Delicatissimo, perfetto per il pesto alla genovese o per il pesce al vapore."
+            },
+            {
+                "utente": "Sara W.",
+                "stelle": 4,
+                "commento": "Olio dorato e leggero, ideale per chi non ama i sapori troppo forti."
+            }
+        ]
+    },
+    "8002223334445": {
+        "nome": "Colle Umbro - Olio EVO Estratto a Freddo",
+        "categoria": "Olio EVO",
+        "lotto": "L.OL24/U08",
+        "certificazioni": [
+            "100% Italiano"
+        ],
+        "storia": "Selezione accurata delle migliori olive dell'Umbria. Lavorazione meccanica a freddo continuo per garantire stabilità e purezza.",
+        "prezzoMedio": 13.5,
+        "valutazione": 4.4,
+        "recensioni": [
+            {
+                "utente": "Daniele S.",
+                "stelle": 4,
+                "commento": "Ottimo olio quotidiano, saporito e genuino."
+            },
+            {
+                "utente": "Cinzia P.",
+                "stelle": 5,
+                "commento": "Ottimo rapporto qualità prezzo per un prodotto 100% italiano."
+            }
+        ]
+    }
+}

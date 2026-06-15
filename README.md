@@ -5,6 +5,7 @@ Questo progetto consiste nello sviluppo di un'applicazione per smartphone realiz
 
 L'obiettivo principale è lo studio e l'applicazione di tre elementi chiave: l'organizzazione delle diverse schermate dell'applicazione, la creazione di un sistema di navigazione per passare da una pagina all'altra in modo fluido e l'integrazione del software con le funzioni hardware del telefono, in particolare la fotocamera. Tramite questo progetto, è possibile analizzare la gestione dei permessi di sicurezza necessari per attivare i sensori del dispositivo e comprendere come strutturare gli elementi grafici per offrire un'esperienza utente semplice e ordinata.
 
+
 ---
 
 ## installazione applicazione expo
@@ -541,7 +542,25 @@ Dopo aver visto il catalogo delle aziende si andrà a creare un secondo archivio
 }
 ```
 
+## Clonare il Progetto (Se già esistente)
 
+Se vuoi scaricare una copia di questo progetto già presente su GitHub ed eseguirla sul tuo computer, apri il terminale e digita:
+
+```bash
+# Clona la repository sul tuo computer
+git clone [https://github.com/tuo-username/nome-repository.git](https://github.com/tuo-username/nome-repository.git)
+
+# Entra nella cartella del progetto appena scaricato
+cd nome-repository
+
+# Installa tutte le dipendenze necessarie del progetto
+npm install
+```
+
+Ovviamente inizializzare il tutto con
+```
+npx expo start
+```
 
 
     

@@ -1,4 +1,4 @@
-# Progetto Expo - Creazione della nostra prima app
+ # <mark>Progetto Expo - Creazione della nostra prima app</mark>
 
 ## Introduzione
 Questo progetto consiste nello sviluppo di un'applicazione per smartphone realizzata tramite Expo e React Native. Il lavoro nasce come un'esercitazione pratica finalizzata all'apprendimento e alla comprensione dei passaggi fondamentali della programmazione mobile.

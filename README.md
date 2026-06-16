@@ -66,4 +66,14 @@ In basso trovi una lista di tasti rapidi per testare l'app, tra cui:
 ```
 
 
+## Dimostrazione esecuzione del Generatore
+
+
+
+https://github.com/user-attachments/assets/e900c815-793f-4a12-b239-70f73040b123
+
+
+
+
+
 

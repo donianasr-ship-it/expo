@@ -202,7 +202,7 @@ export default function Index() {
         )}
 
         <Link href="/about" style={styles.link}>
-          Go to About screen
+          Vai alla scheda delle informazioni!
         </Link>
       </Animated.View>
     </View>

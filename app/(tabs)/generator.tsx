@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import BarcodeGenerator from './BarcodeGenerator';
+import BarcodeGenerator from '../components/BarcodeGenerator';
  
 // ─── EAN-13 check digit calculator ─────────────────────────────────────────
 // Se l'utente inserisce 12 cifre, calcoliamo automaticamente il 13° digit.

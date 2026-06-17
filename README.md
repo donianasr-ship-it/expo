@@ -7,7 +7,16 @@ L'obiettivo principale è lo studio e l'applicazione di tre elementi chiave: l'o
 
 
 ---
-## Installazione
+
+
+
+## Avvio del programma 
+
+Per prima cosa bisognerà inserire questo comando serve a muoversi all'interno del terminale per entrare nella cartella specifica del progetto.
+
+```
+cd C:\Users\Stage\Desktop\scanner-generatore-qr-vini-oli
+```
 
 Per poter fare in modo che che l'applicazione possa funzionare la prima cosa da fare è utilittazre questo comando, serve scaricare e installare automaticamente sul tuo computer tutte le librerie e i moduli esterni necessari per far funzionare un progetto Node.js.
 
@@ -15,29 +24,21 @@ Per poter fare in modo che che l'applicazione possa funzionare la prima cosa da 
 npm install
 ```
 
-Come seconda cosa, bisognerà inserire questo comando serve a muoversi all'interno del terminale per entrare nella cartella specifica del progetto.
-
-```
-cd https://github.com/donianasr-ship-it/scanner-generatore-qr-vini-oli.git
-```
-
----
-
-## Avvio del programma 
-
-Uno volta fatto i npassaggi precedenti possiamo passare all'avvio attraverso questo comando:
+Uno volta fatto i passaggi precedenti possiamo passare all'avvio attraverso questo comando:
 
 ```
 npx expo start
 ```
 
-**Per poter collegare il telefono al pc si userà il seguente comando**
+Se si riscontrano problemi di connessione di rete tra pc e telefono , si può forzare l'avvio locale con:
 
 ```
 npx expo start --localhost
 ```
 
-Una volta arrivati a questo punto nel terminale ci uscirà un QRCODE che serve per aprire l'applicazione sul telefono.
+---
+
+Una volta arrivati a questo punto nel terminale apparirà un QR CODE che serve per aprire l'applicazione sul telefono.
 
 <img width="777" height="599" alt="Immagine 2026-06-15 172825" src="https://github.com/user-attachments/assets/462f586b-f115-404c-a9dd-8fe962f17d70" />
 
@@ -52,17 +53,42 @@ In basso trovi una lista di tasti rapidi per testare l'app, tra cui:
 ## Struttura delle Cartelle
 
 ```text
-├── app/                      # CARTELLA PRINCIPALE (Contiene il codice dell'app)
-│   ├── (tabs)/               # Gestisce il menu di navigazione in basso dello schermo
-│   │   ├── _layout.tsx       # Crea la barra del menu grafico (es. i pulsanti Home / About)
-│   │   ├── index.tsx         # La pagina principale dell'app dove si attiva la FOTOCAMERA
-│   │   └── about.tsx         # Pagina secondaria con le informazioni di aiuto dell'app
-│   └── +not-found.tsx        # Schermata di errore automatica se l'app "sbaglia strada"
-│
-└── assets/                   # CARTELLA DELLE RISORSE (Immagini, Font e Dati)
-    └── data/                 # Sotto-cartella creata da noi per i nostri archivi di testo
-        ├── produttori.json   # FILE 1: Il database con i dettagli delle aziende agricole
-        └── prodotti.json     # FILE 2: Il catalogo con i prezzi e i lotti delle singole bottiglie
+SCANNER-GENERATORE-QR-VINI-OLI
+├── .claude/
+│   └── settings.json
+├── .expo/
+├── .vscode/
+├── android/
+├── app/
+│   ├── (tabs)/
+│   │   ├── _layout.tsx
+│   │   ├── about.tsx
+│   │   ├── generator.tsx
+│   │   └── index.tsx
+│   ├── components/
+│   │   └── BarcodeGenerator.tsx
+│   ├── _layout.tsx
+│   ├── +not-found.tsx
+│   ├── about.tsx
+│   ├── database_ean13.json
+│   ├── database_qrcode.json
+│   └── index.tsx
+├── app-example/
+├── assets/
+├── node_modules/
+├── -metro.config.js
+├── .gitignore
+├── AGENTS.md
+├── app.json
+├── CATALOGO.pdf
+├── eslint.config.js
+├── expo-env.d.ts
+├── index.js
+├── package-lock.json
+├── package.json
+├── README.md
+├── start-android.bat
+└── tsconfig.json
 ```
 
 

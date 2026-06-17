@@ -54,41 +54,39 @@ In basso trovi una lista di tasti rapidi per testare l'app, tra cui:
 
 ```text
 SCANNER-GENERATORE-QR-VINI-OLI
-├── .claude/
-│   └── settings.json
-├── .expo/
-├── .vscode/
-├── android/
-├── app/
-│   ├── (tabs)/
-│   │   ├── _layout.tsx
-│   │   ├── about.tsx
-│   │   ├── generator.tsx
-│   │   └── index.tsx
-│   ├── components/
-│   │   └── BarcodeGenerator.tsx
-│   ├── _layout.tsx
-│   ├── +not-found.tsx
-│   ├── about.tsx
-│   ├── database_ean13.json
-│   ├── database_qrcode.json
-│   └── index.tsx
-├── app-example/
-├── assets/
-├── node_modules/
-├── -metro.config.js
-├── .gitignore
-├── AGENTS.md
-├── app.json
-├── CATALOGO.pdf
-├── eslint.config.js
-├── expo-env.d.ts
-├── index.js
-├── package-lock.json
-├── package.json
-├── README.md
-├── start-android.bat
-└── tsconfig.json
+├── .gitignore                      # File per escludere file/cartelle locali da Git
+├── AGENTS.md                       # Documentazione del progetto
+├── CATALOGO.pdf                    # Documentazione/Catalogo allegato
+├── README.md                       # Documentazione principale del repository
+├── app.json                        # Configurazione globale dell'app Expo
+├── eslint.config.js                # Configurazione di ESLint per il codice
+├── expo-env.d.ts                   # Definizioni dei tipi TypeScript per Expo
+├── index.js                        # Entry point dell'applicazione
+├── metro.config.js                 # Configurazione del bundler Metro (rinominato da -metro.config.js)
+├── package-lock.json               # Lockfile delle dipendenze di Node
+├── package.json                    # Dipendenze e script del progetto
+├── start-android.bat               # Script batch per avviare l'emulatore Android
+├── tsconfig.json                   # Configurazione di TypeScript
+│
+├── android/                        # Cartella nativa per la build Android
+│
+├── app/                            # CARTELLA PRINCIPALE DEL CODICE (Expo Router)
+│   ├── (tabs)/                     # Navigazione principale a schede (Tab Bar)
+│   │   ├── _layout.tsx             # Struttura e icone delle schede della Tab Bar
+│   │   ├── about.tsx               # Schermata "About / Chi Siamo" (Rimasta Attiva)
+│   │   ├── generator.tsx           # Schermata di generazione del QR Code
+│   │   └── index.tsx               # Schermata principale (Home dell'app)
+│   │
+│   ├── components/                 # Componenti riutilizzabili locali alla cartella app
+│   │   └── BarcodeGenerator.tsx    # Componente per la generazione dei codici a barre
+│   │
+│   ├── _layout.tsx                 # Root layout dell'intera applicazione
+│   ├── +not-found.tsx              # Schermata di fallback in caso di percorso non trovato
+│   ├── database_ean13.json         # Mock database / Dati statici per EAN13
+│   └── database_qrcode.json        # Mock database / Dati statici per QR Code
+│
+└── assets/                         # Risorse statiche (Immagini, Font, Icone dell'app)
+
 ```
 
 
